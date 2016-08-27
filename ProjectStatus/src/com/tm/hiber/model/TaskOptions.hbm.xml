@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2016 8:10:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tm.hiber.model.TaskOptions" table="TASK_OPTIONS" schema="TASK_MANAGER_DB" optimistic-lock="version">
+        <id name="recordId" type="big_decimal">
+            <column name="RECORD_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tag" type="string">
+            <column name="TAG" length="20" />
+        </property>
+        <property name="keyText" type="string">
+            <column name="KEY_TEXT" length="20" />
+        </property>
+        <property name="valueText" type="string">
+            <column name="VALUE_TEXT" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="2000" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2016 8:10:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tm.hiber.model.TaskComments" table="TASK_COMMENTS" schema="TASK_MANAGER_DB" optimistic-lock="version">
+        <id name="recordId" type="big_decimal">
+            <column name="RECORD_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="refTaskId" type="big_decimal">
+            <column name="REF_TASK_ID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="commentText" type="string">
+            <column name="COMMENT_TEXT" length="2000" not-null="true" />
+        </property>
+        <property name="commentDate" type="date">
+            <column name="COMMENT_DATE" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

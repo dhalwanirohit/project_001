@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2016 8:10:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tm.hiber.model.TaskPlan" table="TASK_PLAN" schema="TASK_MANAGER_DB" optimistic-lock="version">
+        <composite-id name="id" class="com.tm.hiber.model.TaskPlanId">
+            <key-property name="recordId" type="big_decimal">
+                <column name="RECORD_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="refTaskId" type="big_decimal">
+                <column name="REF_TASK_ID" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="analysisLevel" type="string">
+            <column name="ANALYSIS_LEVEL" not-null="true" />
+        </property>
+        <property name="plannedDate" type="date">
+            <column name="PLANNED_DATE" length="7" />
+        </property>
+        <property name="analyst" type="string">
+            <column name="ANALYST" />
+        </property>
+        <property name="auditLastupdateby" type="string">
+            <column name="AUDIT_LASTUPDATEBY" />
+        </property>
+        <property name="auditLastupdateon" type="date">
+            <column name="AUDIT_LASTUPDATEON" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

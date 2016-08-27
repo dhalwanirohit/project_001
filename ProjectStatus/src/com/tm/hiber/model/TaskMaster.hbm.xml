@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2016 8:10:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tm.hiber.model.TaskMaster" table="TASK_MASTER" schema="TASK_MANAGER_DB" optimistic-lock="version">
+        <id name="taskId" type="big_decimal">
+            <column name="TASK_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="taskReference" type="string">
+            <column name="TASK_REFERENCE" />
+        </property>
+        <property name="title" type="string">
+            <column name="TITLE" length="500" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="2000" />
+        </property>
+        <property name="createDate" type="date">
+            <column name="CREATE_DATE" length="7" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="assignee" type="string">
+            <column name="ASSIGNEE" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" />
+        </property>
+        <property name="eta" type="date">
+            <column name="ETA" length="7" />
+        </property>
+        <property name="projectName" type="string">
+            <column name="PROJECT_NAME" />
+        </property>
+        <property name="priority" type="string">
+            <column name="PRIORITY" />
+        </property>
+        <property name="commentText" type="string">
+            <column name="COMMENT_TEXT" length="4000" />
+        </property>
+        <property name="moduleName" type="string">
+            <column name="MODULE_NAME" />
+        </property>
+        <property name="assumption" type="string">
+            <column name="ASSUMPTION" length="2000" />
+        </property>
+        <property name="taskType" type="string">
+            <column name="TASK_TYPE" />
+        </property>
+        <property name="auditSysname" type="string">
+            <column name="AUDIT_SYSNAME" />
+        </property>
+        <property name="auditLastupdateby" type="string">
+            <column name="AUDIT_LASTUPDATEBY" />
+        </property>
+        <property name="auditLastupdateon" type="date">
+            <column name="AUDIT_LASTUPDATEON" length="7" />
+        </property>
+        <property name="codeRevision" type="string">
+            <column name="CODE_REVISION" />
+        </property>
+        <property name="retrofitRequired" type="string">
+            <column name="RETROFIT_REQUIRED" />
+        </property>
+        <property name="frameworkVersion" type="string">
+            <column name="FRAMEWORK_VERSION" />
+        </property>
+        <property name="releasePhase" type="string">
+            <column name="RELEASE_PHASE" />
+        </property>
+        <property name="releaseNotes" type="string">
+            <column name="RELEASE_NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>
